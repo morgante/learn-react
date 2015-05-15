@@ -1,8 +1,6 @@
 var React = require('react');
 
-class Hello extends React.Component {
-
-  render() {
-    return <div>Hello, {this.props.name}!</div>
-  }
-}
+React.render(
+	<h1>Hello, world!</h1>,
+	document.getElementById('content')
+ );
