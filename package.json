@@ -1,0 +1,19 @@
+{
+  "name": "learn-react",
+  "version": "0.1.0",
+  "description": "learning react, the gulp way",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/morgante/learn-react.git"
+  },
+  "keywords": [
+    "learn"
+  ],
+  "author": "Morgante Pell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/morgante/learn-react/issues"
+  },
+  "homepage": "https://github.com/morgante/learn-react",
+  "private": true
+}
