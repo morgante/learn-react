@@ -27,6 +27,7 @@
     "gulp-sass": "^2.0.1",
     "reactify": "^1.1.1",
     "react": "^0.13.3",
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "marked": "^0.3.3"
   }
 }
