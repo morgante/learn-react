@@ -1,5 +1,26 @@
 [
-  {"author": "Pete Hunt", "text": "This is one comment"},
-  {"author": "Jordan Walke", "text": "This is *another* comment"},
-  {"author": "Morgante Pelicans are cool", "text": "**I** made this."}
+    {
+        "author": "Pete Hunt",
+        "text": "This is one comment"
+    },
+    {
+        "author": "Jordan Walke",
+        "text": "This is *another* comment"
+    },
+    {
+        "author": "Morgante Pelicans are cool",
+        "text": "**I** made this."
+    },
+    {
+        "author": "rex",
+        "text": "says rex"
+    },
+    {
+        "author": "lex says",
+        "text": "bex"
+    },
+    {
+        "author": "hex",
+        "text": "adecimal"
+    }
 ]
