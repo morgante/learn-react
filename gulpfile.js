@@ -16,10 +16,10 @@ gulp.task('scripts:compile', function() {
 	
 	// set up the browserify instance on a task basis
 	var b = browserify({
-		entries: './app/scripts/main.js',
+		entries: './app/main.js',
 		debug: true,
 		// defining transforms here will avoid crashing your stream
-		transform: []
+		transform: ["reactify"]
 	});
 
 	return b.bundle()
@@ -32,34 +32,26 @@ gulp.task('scripts:compile', function() {
 });
 
 gulp.task('scripts:watch', function () {
-		gulp.watch('./app/scripts/**/*.js', [ 'scripts:compile' ]);
-		gulp.watch('./app/templates/**/*.html', [ 'scripts:compile' ]);
+	gulp.watch('./app/**/*.js', [ 'scripts:compile' ]);
 });
 
 /**
  * Compile Sass
  */
 gulp.task('sass:compile', function () {
-	gulp.src('./app/stylesheets/*.scss')
+	gulp.src('./stylesheets/*.scss')
 		.pipe(sass())
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest('./public/'));
 });
 
 gulp.task('sass:watch', function () {
-		gulp.watch('./app/stylesheets/**/*.scss', [ 'sass:compile' ]);
-});
-
-/**
- * Start express
- */
-gulp.task('express:start', function() {
-	server();
+		gulp.watch('./stylesheets/**/*.scss', [ 'sass:compile' ]);
 });
 
 
 gulp.task('compile', [ 'sass:compile', 'scripts:compile' ]);
 gulp.task('watch', [ 'sass:watch', 'scripts:watch' ]);
-gulp.task('server', [ 'compile', 'watch', 'express:start' ]);
+gulp.task('server', [ 'compile', 'watch' ]);
 gulp.task('default', [ 'server' ]);
 
